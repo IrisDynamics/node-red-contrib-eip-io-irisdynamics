@@ -1,0 +1,67 @@
+<script type="text/javascript">
+
+    RED.nodes.registerType('Iris eip-io out',{
+        category: 'EthernetIP',
+        icon: 'arrow-in.svg',
+        align: 'right',
+        color: '#F15C22',
+        inputs: 1,
+        outputs: 1,
+        defaults: {
+            name: {value: ""},
+            conn: {value: "", type: "eip-io connection"},
+        },
+        label: function() {
+            return this.name ||"Iris eip-io out";
+        },
+    });
+</script>
+
+<script type="text/html" data-template-name="Iris eip-io out">
+    <style>
+        .red-ui-editor .form-row label {
+            width: 125px;
+        }
+    </style>
+    
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-conn"><i class="fa fa-cube"></i> Connection</label>
+        <input type="text" id="node-input-conn" placeholder="">
+    </div>
+</script>
+
+<script type="text/markdown" data-help-name="eip-io out">
+Ethernet/IP IO Output 
+
+### Inputs
+    
+: payload (number) :  the value to write to the output of the device.
+    Topics for inputs:
+    Triton Control
+    Axis Control
+    Motor 1 Position:
+    Motor 2 Position:
+    Motor 3 Position:
+    Motor 4 Position:
+
+### Outputs
+
+1. Standard output
+: payload (number) : the value of the output written to the device.
+    
+
+### Details   
+
+`Byte Offset` , `Bit Offset` and `Bit Size` maps where the value is written to the output assembly instance
+
+### Warning
+
+Caution when using in production devices
+
+**Fully test everything!** The authors cannot be liable for any
+damage or injury caused by the use of this node. 
+</script>

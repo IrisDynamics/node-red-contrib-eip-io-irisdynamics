@@ -1,0 +1,36 @@
+{
+  "name": "irisdynamics/node-red-contrib-eip-io-irisdynamics",
+  "version": "1.0.1",
+  "description": "Node-Red Ethernet/IP Implicit IO Controller Node for Iris Dynamics Adapter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": ""
+  },
+  "author": "Rebecca McWilliam",
+  "keywords": [
+    "node-red",
+    "ORCA Motor",
+    "Ethernet-IP",
+    "Ethernet/IP"
+  ],
+  "license": "ISC",
+  "node-red": {
+    "version": ">=2.0.0",
+    "nodes": {
+      "Iris eip-io scanner": "nodes/Iris_scanner/Iris_scanner.js",
+      "Iris eip-io connection": "nodes/Iris_connection/Iris_connection.js",
+      "Iris eip-io output": "nodes/Iris_output/Iris_output.js",
+      "Iris eip-io input": "nodes/Iris_input/Iris_input.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IrisDynamics/node-red-contrib-eip-io-IrisDynamics"
+  },
+  "bugs": "https://github.com/IrisDynamics/node-red-contrib-eip-io-IrisDynamics/issues",
+  "homepage": "https://irisdynamics.com/",
+  "dependencies": {
+    "st-ethernet-ip": "^2.6.7"
+  }
+}

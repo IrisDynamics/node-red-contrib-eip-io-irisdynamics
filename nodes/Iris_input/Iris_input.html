@@ -1,0 +1,59 @@
+<script type="text/javascript">
+
+    RED.nodes.registerType('Iris eip-io in',{
+        category: 'EthernetIP',
+        icon: 'arrow-in.svg',
+        color: '#F4911E',
+        inputs: 1,
+        outputs: 5,
+        defaults: {
+            name: {value: ""},
+            conn: {value: "", type: "eip-io connection"},
+        },
+        label: function() {
+            return this.name||"Iris eip-io in";
+        },
+    });
+</script>
+
+<script type="text/html" data-template-name="Iris eip-io in">
+    <style>
+        .red-ui-editor .form-row label {
+            width: 125px;
+        }
+    </style>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-conn"><i class="fa fa-cube"></i> Connection</label>
+        <input type="text" id="node-input-conn" placeholder="">
+    </div>
+</script>
+
+<script type="text/markdown" data-help-name="eip-io in">
+    Ethernet/IP IO Input
+
+    ### Inputs
+
+    : payload (any) :  any message will trigger the node to output the current value.
+
+    ### Outputs
+
+    1. Common Header
+    : payload (string) : "Common Header"
+    triton status word(number) :
+    axis enable in (number) :
+    axis status in (number) :
+    2. Motor 1
+
+
+
+    ### Warning
+
+    Caution when using in production devices
+
+    **Fully test everything!** The authors cannot be liable for any
+    damage or injury caused by the use of this node.
+</script>
