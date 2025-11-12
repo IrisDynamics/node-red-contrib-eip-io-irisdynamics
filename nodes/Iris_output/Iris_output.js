@@ -17,7 +17,6 @@ module.exports = function(RED) {
             send = send || function () { node.send.apply(node, arguments) };
             let outValue = msg.payload;
             try {
-                // convert2(msg.payload);
                 switch (msg.topic) {
                     case 'Triton Control':
                         byteOffset = 0;
