@@ -35,33 +35,34 @@
 </script>
 
 <script type="text/markdown" data-help-name="eip-io out">
-Ethernet/IP IO Output 
+    Ethernet/IP IO Output
 
-### Inputs
-    
-: payload (number) :  the value to write to the output of the device.
-    Topics for inputs:
-    Triton Control
-    Axis Control
-    Motor 1 Position:
-    Motor 2 Position:
-    Motor 3 Position:
-    Motor 4 Position:
+    ### Inputs
 
-### Outputs
+    : payload (number) :  the value to write to the output of the device.
+        Topics for inputs:
+        Triton Control: .0 - Triton Enable
+        Axis Control : .0 -Axis 1 Enable, .1 -Axis 2 Enable, .2 -Axis 3 Enable, .3 -Axis 4 Enable, .4 -Axis 1 Autozero, .5 -Axis 2 Autozero, .6 -Axis 3 Autozero, .7 -Axis 4 Autozero
 
-1. Standard output
-: payload (number) : the value of the output written to the device.
-    
+        Motor 1 Position: target position in um
+        Motor 2 Position: target position in um
+        Motor 3 Position: target position in um
+        Motor 4 Position: target position in um
 
-### Details   
+    ### Outputs
 
-`Byte Offset` , `Bit Offset` and `Bit Size` maps where the value is written to the output assembly instance
+    1. Standard output
+    : payload (number) : the value of the output written to the device.
 
-### Warning
 
-Caution when using in production devices
+    ### Details
 
-**Fully test everything!** The authors cannot be liable for any
-damage or injury caused by the use of this node. 
+    `Byte Offset` , `Bit Offset` and `Bit Size` maps where the value is written to the output assembly instance
+
+    ### Warning
+
+    Caution when using in production devices
+
+    **Fully test everything!** The authors cannot be liable for any
+    damage or injury caused by the use of this node.
 </script>

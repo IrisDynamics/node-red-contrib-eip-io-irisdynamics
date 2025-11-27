@@ -34,27 +34,37 @@
 </script>
 
 <script type="text/markdown" data-help-name="eip-io in">
-    Ethernet/IP IO Input
+                Ethernet/IP IO Input
 
-    ### Inputs
+                ### Inputs
 
-    : payload (any) :  any message will trigger the node to output the current value.
+                : payload (any) :  any message will trigger the node to output the current value.
 
-    ### Outputs
+                ### Outputs
 
-    1. Common Header
-    : payload (string) : "Common Header"
-    triton status word(number) :
-    axis enable in (number) :
-    axis status in (number) :
-    2. Motor 1
+                1. Common Header
+                : payload (string) : "Common Header"
+                triton status word(number) :
+                axis enable in (number) :
+                axis status in (number) :
+                2. Motor N
+                : payload (string) : "Motor N"
+                force_in (number): force in millinewtons
+                position_in (number): position in micrometers
+                speed_in (number): speed in mm/s
+                accel_in (number): acceleration in mm/s^2
+                board_temp_in (number): PCB temperature in C, max 70C
+                coil_temp_in (number): internal coil temperature in C, max 120C
+                voltage_in (number): voltage in V
+                power_in (number): power in W
+                mode_in (number): enumeration of motor modes 1 = Sleep, 2 = Force, 3 = Position, 4 = Haptic, 5 = Kinematic, 55 = Auto Zeroing
+                errors_in (number): bit field denoting errors, .0 - Configuration, .5 - Force Clipping,.6 - Temp Exceeded, .7 - Force Exceeded, .8 - Power Exceeded, .9 - Shaft Image Failed, .10 - Voltage Invalid, .11 - Comms Timeout, .13 - Auto Zero Failed
+                status_in (number): .0 - Auto zero complete, .1 - Autozero in progress
 
+                ### Warning
 
+                Caution when using in production devices
 
-    ### Warning
-
-    Caution when using in production devices
-
-    **Fully test everything!** The authors cannot be liable for any
-    damage or injury caused by the use of this node.
+                **Fully test everything!** The authors cannot be liable for any
+                damage or injury caused by the use of this node.
 </script>
