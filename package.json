@@ -1,5 +1,5 @@
 {
-  "name": "irisdynamics/node-red-contrib-eip-io-irisdynamics",
+  "name": "@irisdynamics/node-red-contrib-eip-io-irisdynamics",
   "version": "1.0.1",
   "description": "Node-Red Ethernet/IP Implicit IO Controller Node for Iris Dynamics Adapter",
   "main": "index.js",
