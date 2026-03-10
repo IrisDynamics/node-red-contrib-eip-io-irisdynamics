@@ -18,10 +18,10 @@
   "node-red": {
     "version": ">=2.0.0",
     "nodes": {
-      "Iris eip-io scanner": "nodes/Iris_scanner/Iris_scanner.js",
-      "Iris eip-io connection": "nodes/Iris_connection/Iris_connection.js",
-      "Iris eip-io output": "nodes/Iris_output/Iris_output.js",
-      "Iris eip-io input": "nodes/Iris_input/Iris_input.js"
+      "Iris_scanner": "nodes/Iris_scanner/Iris_scanner.js",
+      "Iris_connection": "nodes/Iris_connection/Iris_connection.js",
+      "Iris_output": "nodes/Iris_output/Iris_output.js",
+      "Iris_input": "nodes/Iris_input/Iris_input.js"
     }
   },
   "repository": {
@@ -32,5 +32,8 @@
   "homepage": "https://irisdynamics.com/",
   "dependencies": {
     "st-ethernet-ip": "^2.6.7"
-  }
+  },
+  "files": [
+    "nodes/"
+  ]
 }
